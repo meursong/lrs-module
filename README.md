@@ -29,3 +29,14 @@ Add the following dependency to your `build.gradle` file:
 dependencies {
     implementation 'com.meursong:lrs-module:0.1.0-SNAPSHOT'
 }
+```
+
+#### Maven
+Add the following dependency to your `pom.xml` file:
+```maven
+<dependency>
+    <groupId>com.meursong</groupId>
+    <artifactId>lrs-module</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+</dependency>
+```
