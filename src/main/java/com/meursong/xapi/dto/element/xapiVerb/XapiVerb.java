@@ -2,6 +2,7 @@ package com.meursong.xapi.dto.element.xapiVerb;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.meursong.xapi.consonant.Language;
 
 import java.util.Map;
@@ -13,11 +14,14 @@ import java.util.Map;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class XapiVerb {
-    private final String id;
-    private final Map<Language, String> display;
+    private String id; // required
 
-    @JsonIgnore
-    private boolean isValid = true;
+    @JsonProperty("display")
+    private Map<Language, String> display; // optional
+
+    public boolean isValid() {
+        return id != null && !id.isEmpty();
+    }
 
     public String getId() {
         return id;
@@ -27,12 +31,11 @@ public class XapiVerb {
         return display;
     }
 
-    public boolean isValid() {
-        return isValid;
-    }
 
-    public void setValidate(boolean validate) {
-        isValid = validate;
+    public XapiVerb() {}
+
+    public XapiVerb(String id) {
+        this.id = id;
     }
 
     public XapiVerb(String id, Map<Language, String> display) {
@@ -40,11 +43,4 @@ public class XapiVerb {
         this.display = display;
     }
 
-    @Override
-    public String toString() {
-        return "XapiVerb{" +
-                "id='" + id + '\'' +
-                ", display=" + display +
-                '}';
-    }
 }
