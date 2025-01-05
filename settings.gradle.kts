@@ -1,2 +1,2 @@
-rootProject.name = "lrs-module"
+rootProject.name = "xapi-module"
 
