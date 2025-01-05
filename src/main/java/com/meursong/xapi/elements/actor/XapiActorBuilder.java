@@ -1,4 +1,4 @@
-package com.meursong.xapi.dto.element.xapiActor;
+package com.meursong.xapi.elements.actor;
 
 import java.util.List;
 

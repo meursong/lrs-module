@@ -1,9 +1,8 @@
-package com.meursong.xapi.dto.element.xapiContext;
+package com.meursong.xapi.elements.context;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.meursong.xapi.consonant.ContextActivityType;
-import com.meursong.xapi.dto.element.xapiActor.XapiActor;
+import com.meursong.xapi.elements.actor.XapiActor;
 
 import java.util.Map;
 

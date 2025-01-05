@@ -1,8 +1,8 @@
 package com.meursong.xapi.util;
 
-import com.meursong.xapi.consonant.Language;
-import com.meursong.xapi.consonant.XapiVerbEnum;
-import com.meursong.xapi.dto.element.xapiVerb.XapiVerb;
+import com.meursong.xapi.common.Language;
+import com.meursong.xapi.elements.verb.XapiVerbEnum;
+import com.meursong.xapi.elements.verb.XapiVerb;
 
 import java.util.Map;
 
@@ -17,14 +17,14 @@ public class XapiVerbUtil {
 
     // Creates new XapiVerb object with the given id(uri).
     public static XapiVerb createVerb(String id) {
-        XapiUtil.validateUri(id);
+        XapiCommonUtil.validateUri(id);
         return new XapiVerb(id);
     }
 
     // Creates new XapiVerb object with the given id(uri) and display.
     public static XapiVerb createVerb(String id, Map<Language, String> display) {
-        XapiUtil.validateUri(id);
-        XapiUtil.validateDisplay(display);
+        XapiCommonUtil.validateUri(id);
+        XapiCommonUtil.validateDisplay(display);
 
         return new XapiVerb(id, display);
     }

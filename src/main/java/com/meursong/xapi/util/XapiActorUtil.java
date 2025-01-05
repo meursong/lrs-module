@@ -1,8 +1,8 @@
 package com.meursong.xapi.util;
 
-import com.meursong.xapi.dto.element.xapiActor.XapiAccount;
-import com.meursong.xapi.dto.element.xapiActor.XapiAgent;
-import com.meursong.xapi.dto.element.xapiActor.XapiGroup;
+import com.meursong.xapi.elements.actor.XapiAccount;
+import com.meursong.xapi.elements.actor.XapiAgent;
+import com.meursong.xapi.elements.actor.XapiGroup;
 
 import java.util.List;
 

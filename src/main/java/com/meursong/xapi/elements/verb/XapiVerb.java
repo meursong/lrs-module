@@ -1,9 +1,8 @@
-package com.meursong.xapi.dto.element.xapiVerb;
+package com.meursong.xapi.elements.verb;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.meursong.xapi.consonant.Language;
+import com.meursong.xapi.common.Language;
 
 import java.util.Map;
 

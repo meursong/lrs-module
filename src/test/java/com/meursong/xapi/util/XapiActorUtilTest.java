@@ -1,7 +1,7 @@
 package com.meursong.xapi.util;
 
-import com.meursong.xapi.dto.element.xapiActor.XapiAgent;
-import com.meursong.xapi.dto.element.xapiActor.XapiGroup;
+import com.meursong.xapi.elements.actor.XapiAgent;
+import com.meursong.xapi.elements.actor.XapiGroup;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;

@@ -1,5 +1,5 @@
-package com.meursong.xapi.consonant;
-import com.meursong.xapi.dto.element.xapiVerb.XapiVerb;
+package com.meursong.xapi.elements.verb;
+import com.meursong.xapi.common.Language;
 
 import java.util.Map;
 

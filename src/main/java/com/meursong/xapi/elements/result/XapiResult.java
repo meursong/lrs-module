@@ -1,4 +1,4 @@
-package com.meursong.xapi.dto.element.xapiResult;
+package com.meursong.xapi.elements.result;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;

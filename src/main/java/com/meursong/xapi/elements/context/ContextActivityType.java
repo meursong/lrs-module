@@ -1,4 +1,4 @@
-package com.meursong.xapi.consonant;
+package com.meursong.xapi.elements.context;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

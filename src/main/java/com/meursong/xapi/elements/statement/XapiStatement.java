@@ -1,13 +1,13 @@
-package com.meursong.xapi.dto;
+package com.meursong.xapi.elements.statement;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.meursong.xapi.dto.element.xapiActor.XapiActor;
-import com.meursong.xapi.dto.element.xapiContext.XapiContext;
-import com.meursong.xapi.dto.element.xapiObject.XapiObject;
-import com.meursong.xapi.dto.element.xapiResult.XapiResult;
-import com.meursong.xapi.dto.element.xapiVerb.XapiVerb;
-import com.meursong.xapi.util.XapiUtil;
+import com.meursong.xapi.elements.actor.XapiActor;
+import com.meursong.xapi.elements.context.XapiContext;
+import com.meursong.xapi.elements.object.XapiObject;
+import com.meursong.xapi.elements.result.XapiResult;
+import com.meursong.xapi.elements.verb.XapiVerb;
+import com.meursong.xapi.util.XapiCommonUtil;
 
 /**
  * 2024.12.24[susong]: LRS 설계
@@ -95,6 +95,6 @@ public class XapiStatement {
     }
 
     public static XapiStatementBuilder builder() {
-        return new XapiStatementBuilder().id(XapiUtil.generateId());
+        return new XapiStatementBuilder().id(XapiCommonUtil.generateId());
     }
 }
