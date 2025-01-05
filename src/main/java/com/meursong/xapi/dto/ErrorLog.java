@@ -1,17 +1,10 @@
 package com.meursong.xapi.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.time.LocalDateTime;
 
 /**
  * 2024.12.24[susong]: LRS저장 실패시 저장되는 ErrorLog DTO
  */
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class ErrorLog {
 
     // 로그 ID
