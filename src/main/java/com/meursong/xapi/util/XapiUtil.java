@@ -3,6 +3,7 @@ package com.meursong.xapi.util;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.meursong.xapi.consonant.ContextActivityType;
+import com.meursong.xapi.consonant.Language;
 import com.meursong.xapi.dto.element.xapiActor.XapiAccount;
 import com.meursong.xapi.dto.element.xapiActor.XapiActor;
 import com.meursong.xapi.dto.element.xapiActor.XapiAgent;
@@ -185,6 +186,19 @@ public class XapiUtil {
             }
         } catch (Exception e) {
             throw new IllegalArgumentException("Invalid URI format for Verb ID: " + id, e);
+        }
+    }
+
+    public static void validateDisplay(Map<Language, String> display) {
+        if (display == null) {
+            throw new IllegalArgumentException("Display map cannot be null.");
+        }
+
+        for (Map.Entry<Language, String> entry : display.entrySet()) {
+            if (entry.getKey() == null || entry.getValue() == null || entry.getValue().isEmpty()) {
+                throw new IllegalArgumentException(
+                        "Invalid display entry: key and value must not be null or empty. Entry: " + entry);
+            }
         }
     }
 }
