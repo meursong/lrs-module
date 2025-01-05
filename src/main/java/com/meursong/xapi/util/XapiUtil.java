@@ -172,7 +172,17 @@ public class XapiUtil {
         }
 
         try {
-            new URI(id); // Throws URISyntaxException if invalid
+            URI uri = new URI(id);
+
+            // Ensure the URI has a scheme (e.g., http, https)
+            if (uri.getScheme() == null || uri.getScheme().isEmpty()) {
+                throw new IllegalArgumentException("Invalid URI format: missing scheme in Verb ID: " + id);
+            }
+
+            // ensure the scheme is valid (e.g., http or https)
+            if (!uri.getScheme().matches("https?")) {
+                throw new IllegalArgumentException("Invalid URI scheme for Verb ID: " + id);
+            }
         } catch (Exception e) {
             throw new IllegalArgumentException("Invalid URI format for Verb ID: " + id, e);
         }
