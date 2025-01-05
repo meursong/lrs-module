@@ -1,6 +1,6 @@
-# LRS Module
+# xAPI Module
 
-**LRS Module** is a modularized implementation of a Learning Record Store (LRS) for Java-based projects. It allows easy integration of xAPI (Experience API) capabilities into your application, providing robust features for storing, querying, and managing learning activity data.
+** xAPI Module** is a modularized implementation of a Learning Record Store (LRS) for Java-based projects. It allows easy integration of xAPI (Experience API) capabilities into your application, providing robust features for storing, querying, and managing learning activity data.
 
 ---
 
