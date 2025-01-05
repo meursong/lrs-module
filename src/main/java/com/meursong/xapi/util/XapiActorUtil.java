@@ -12,7 +12,7 @@ public class XapiActorUtil {
         // 인스턴스화 방지
     }
 
-    // 이메일만으로 Agent 생성
+    // email만으로 Agent 생성
     public static XapiAgent createAgentWithMbox(String mbox) {
         if (mbox == null || mbox.isEmpty()) {
             throw new IllegalArgumentException("Invalid mbox: must not be null or empty.");
@@ -24,7 +24,7 @@ public class XapiActorUtil {
     }
 
 
-    // 이름과 이메일로 Agent 생성
+    // name과 email로 Agent 생성
     public static XapiAgent createAgentWithNameAndMbox(String name, String mbox) {
         if (mbox == null || mbox.isEmpty()) {
             throw new IllegalArgumentException("Invalid mbox: must not be null or empty.");
@@ -48,7 +48,20 @@ public class XapiActorUtil {
         return agent;
     }
 
-    // 이름만으로 Group 생성
+    // name과 Account으로 Agent 생성
+    public static XapiAgent createAgentWithNameAndAccount(String name, String accountName, String homePage) {
+        XapiAccount account = new XapiAccount(accountName, homePage);
+        if (!account.isValid()) {
+            throw new IllegalArgumentException("Invalid Account: must have valid name and homePage.");
+        }
+
+        XapiAgent agent = new XapiAgent();
+        agent.setName(name);
+        agent.setAccount(account);
+        return agent;
+    }
+
+    // name만으로 Group 생성
     public static XapiGroup createGroupWithName(String name) {
         if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("Invalid group name: must not be null or empty.");
@@ -58,7 +71,7 @@ public class XapiActorUtil {
     }
 
 
-    // 멤버 리스트로 Group 생성
+    // Member 리스트로 Group 생성
     public static XapiGroup createGroupWithMembers(List<XapiAgent> members) {
         if (members == null || members.isEmpty()) {
             throw new IllegalArgumentException("Invalid members: must not be null or empty.");
@@ -67,7 +80,7 @@ public class XapiActorUtil {
         return new XapiGroup(null, members);
     }
 
-    // 이름과 멤버 리스트로 Group 생성
+    // name과 Member 리스트로 Group 생성
     public static XapiGroup createGroupWithNameAndMembers(String name, List<XapiAgent> members) {
         if (members == null || members.isEmpty()) {
             throw new IllegalArgumentException("Invalid members: must not be null or empty.");
