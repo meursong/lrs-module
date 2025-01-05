@@ -17,7 +17,7 @@ public class XapiVerb {
     private final Map<Language, String> display;
 
     @JsonIgnore
-    private boolean isValidate = true;
+    private boolean isValid = true;
 
     public String getId() {
         return id;
@@ -27,12 +27,12 @@ public class XapiVerb {
         return display;
     }
 
-    public boolean isValidate() {
-        return isValidate;
+    public boolean isValid() {
+        return isValid;
     }
 
     public void setValidate(boolean validate) {
-        isValidate = validate;
+        isValid = validate;
     }
 
     public XapiVerb(String id, Map<Language, String> display) {

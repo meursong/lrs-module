@@ -29,11 +29,11 @@ public class XapiStatement {
     private String id;
 
     public boolean validate() {
-        return xapiActor.isValidate()
-                && xapiVerb.isValidate()
-                && xapiObject.isValidate()
-                && (xapiContext == null || xapiContext.isValidate())
-                && (xapiResult == null || xapiResult.isValidate());
+        return xapiActor.isValid()
+                && xapiVerb.isValid()
+                && xapiObject.isValid()
+                && (xapiContext == null || xapiContext.isValid())
+                && (xapiResult == null || xapiResult.isValid());
     }
 
     // Builder 패턴

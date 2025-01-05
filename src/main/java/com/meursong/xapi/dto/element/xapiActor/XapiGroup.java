@@ -23,7 +23,7 @@ public class XapiGroup implements XapiActor {
     }
 
     @Override
-    public boolean isValidate() {
+    public boolean isValid() {
         return members != null && !members.isEmpty();
     }
 

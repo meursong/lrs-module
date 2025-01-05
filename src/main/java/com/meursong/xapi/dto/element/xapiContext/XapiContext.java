@@ -24,7 +24,7 @@ public class XapiContext {
     private Object extensions;
 
     @JsonIgnore
-    private boolean isValidate = true;
+    private boolean isValid = true;
 
     public Map<ContextActivityType, Object> getContextActivities() {
         return contextActivities;
@@ -54,8 +54,8 @@ public class XapiContext {
         return extensions;
     }
 
-    public boolean isValidate() {
-        return isValidate;
+    public boolean isValid() {
+        return isValid;
     }
 
     public void setContextActivities(Map<ContextActivityType, Object> contextActivities) {
@@ -87,7 +87,7 @@ public class XapiContext {
     }
 
     public void setValidate(boolean validate) {
-        isValidate = validate;
+        isValid = validate;
     }
 }
 

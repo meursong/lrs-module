@@ -21,7 +21,7 @@ public class XapiResult {
     private Map<String, Object> extensions;
 
     @JsonIgnore
-    private boolean isValidate = true;
+    private boolean isValid = true;
 
 
     public Object getScore() {
@@ -48,8 +48,8 @@ public class XapiResult {
         return extensions;
     }
 
-    public boolean isValidate() {
-        return isValidate;
+    public boolean isValid() {
+        return isValid;
     }
 
     public void setScore(Object score) {
@@ -77,6 +77,6 @@ public class XapiResult {
     }
 
     public void setValidate(boolean validate) {
-        isValidate = validate;
+        isValid = validate;
     }
 }

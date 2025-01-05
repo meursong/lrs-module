@@ -11,7 +11,7 @@ public class XapiAgent implements XapiActor {
     private XapiAccount account;              // 계정 정보
 
     @JsonIgnore
-    private boolean isValidate = true;
+    private boolean isValid = true;
 
     public XapiAgent() {}
 
@@ -19,7 +19,7 @@ public class XapiAgent implements XapiActor {
         this.mbox = mbox;
         this.name = name;
         this.account = account;
-        this.isValidate = validate();
+        this.isValid = validate();
     }
 
     @Override
@@ -28,7 +28,7 @@ public class XapiAgent implements XapiActor {
     }
 
     @Override
-    public boolean isValidate() {
+    public boolean isValid() {
         return validate();
     }
 

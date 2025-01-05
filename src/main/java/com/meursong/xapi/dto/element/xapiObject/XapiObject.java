@@ -43,13 +43,13 @@ public abstract class XapiObject {
     }
 
     public void setValidate(boolean validate) {
-        isValidate = validate;
+        isValid = validate;
     }
 
-    public boolean isValidate() {
-        return isValidate;
+    public boolean isValid() {
+        return isValid;
     }
 
     @JsonIgnore
-    private boolean isValidate = true;
+    private boolean isValid = true;
 }

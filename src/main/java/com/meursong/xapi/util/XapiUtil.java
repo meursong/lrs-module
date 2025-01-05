@@ -41,7 +41,7 @@ public class XapiUtil {
         xapiAccount.setHomePage(homePage);
         agent.setAccount(xapiAccount);
 
-        if (!agent.isValidate()) {
+        if (!agent.isValid()) {
             throw new IllegalArgumentException("Invalid Agent: XapiAccount must have valid actorName and homePage.");
         }
 
