@@ -1,7 +1,7 @@
 package com.meursong.xapi.util;
 
 import com.meursong.xapi.common.Language;
-import com.meursong.xapi.elements.verb.XapiVerbEnum;
+import com.meursong.xapi.sample.XapiVerbEnum;
 import com.meursong.xapi.elements.verb.XapiVerb;
 import org.junit.jupiter.api.Test;
 
