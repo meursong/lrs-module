@@ -15,6 +15,13 @@
 
 ---
 
+## Use Cases
+
+- Applications that need to generate xAPI statements for tracking learning activities.
+- Systems requiring a simple and modular way to adopt xAPI without full LRS integration.
+
+---
+
 ## Getting Started
 
 ### Prerequisites
