@@ -3,7 +3,7 @@ import com.meursong.xapi.dto.element.xapiVerb.XapiVerb;
 
 import java.util.Map;
 
-public enum XapiVerbType {
+public enum XapiVerbEnum {
     COMPLETED("http://adlnet.gov/expapi/verbs/completed",
             Map.of(Language.EN_US, "completed", Language.KO_KR, "완료하다")),
     VIEWED("http://id.tincanapi.com/verb/viewed",
@@ -44,7 +44,7 @@ public enum XapiVerbType {
     private final String id;
     private final XapiVerb xapiVerb;
 
-    XapiVerbType(String id, Map<Language, String> display) {
+    XapiVerbEnum(String id, Map<Language, String> display) {
         this.id = id;
         this.xapiVerb = new XapiVerb(id, display);
     }
