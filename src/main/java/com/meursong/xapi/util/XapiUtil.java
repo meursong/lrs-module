@@ -3,8 +3,9 @@ package com.meursong.xapi.util;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.meursong.xapi.consonant.ContextActivityType;
-import com.meursong.xapi.dto.element.xapiActor.Account;
+import com.meursong.xapi.dto.element.xapiActor.XapiAccount;
 import com.meursong.xapi.dto.element.xapiActor.XapiActor;
+import com.meursong.xapi.dto.element.xapiActor.XapiAgent;
 import com.meursong.xapi.dto.element.xapiContext.XapiContext;
 import com.meursong.xapi.dto.element.xapiObject.Activity;
 
@@ -32,31 +33,19 @@ public class XapiUtil {
      * @param homePage 홈 페이지 URL
      * @return Actor 객체
      */
-    public static XapiActor createActor(String actorName, String homePage) {
-        XapiActor actor = new XapiActor();
-        actor.setObjectType("Agent");
+    public static XapiActor createAgentWithAccount(String actorName, String homePage) {
+        XapiAgent agent = new XapiAgent();
 
-        // 유효성 검증
-        boolean isValid = true;
+        XapiAccount xapiAccount = new XapiAccount();
+        xapiAccount.setName(actorName);
+        xapiAccount.setHomePage(homePage);
+        agent.setAccount(xapiAccount);
 
-        if (actorName == null || actorName.isEmpty()) {
-            isValid = false;
+        if (!agent.isValidate()) {
+            throw new IllegalArgumentException("Invalid Agent: XapiAccount must have valid actorName and homePage.");
         }
 
-        if (homePage == null || homePage.isEmpty()) {
-            isValid = false;
-        }
-
-        actor.setValidate(isValid);
-
-        if (isValid) {
-            Account account = new Account();
-            account.setName(actorName);
-            account.setHomePage(homePage);
-            actor.setAccount(account);
-        }
-
-        return actor;
+        return agent;
     }
 
     /**
