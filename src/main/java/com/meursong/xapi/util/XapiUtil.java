@@ -9,6 +9,7 @@ import com.meursong.xapi.dto.element.xapiActor.XapiAgent;
 import com.meursong.xapi.dto.element.xapiContext.XapiContext;
 import com.meursong.xapi.dto.element.xapiObject.Activity;
 
+import java.net.URI;
 import java.util.Map;
 import java.util.UUID;
 
@@ -162,5 +163,18 @@ public class XapiUtil {
             }
         }
         return null;
+    }
+
+    // Validates that the given id is a valid URI
+    public static void validateUri(String id) {
+        if (id == null || id.isEmpty()) {
+            throw new IllegalArgumentException("Verb ID cannot be null or empty.");
+        }
+
+        try {
+            new URI(id); // Throws URISyntaxException if invalid
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Invalid URI format for Verb ID: " + id, e);
+        }
     }
 }
