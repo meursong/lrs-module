@@ -24,6 +24,10 @@ public class XapiCommonUtil {
         // 인스턴스화 방지
     }
 
+    public static String generateId() {
+        return UUID.randomUUID().toString();
+    }
+
     // Object Id 빌더
     public static String buildObjectId(String objectBaseUrl, String targetObject, String variable) {
 
