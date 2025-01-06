@@ -3,7 +3,9 @@ package com.meursong.xapi.elements.context;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.meursong.xapi.elements.actor.XapiActor;
+import com.meursong.xapi.elements.object.Activity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,7 +16,7 @@ import java.util.Map;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class XapiContext {
-    private Map<ContextActivityType, Object> contextActivities; // parent, grouping, category, other
+    private Map<ContextActivityType, List<Activity>> contextActivities; // parent, grouping, category, other // parent, grouping, category, other
     private String registration;
     private XapiActor instructor;
     private String revision;
@@ -25,7 +27,7 @@ public class XapiContext {
     @JsonIgnore
     private boolean isValid = true;
 
-    public Map<ContextActivityType, Object> getContextActivities() {
+    public Map<ContextActivityType, List<Activity>> getContextActivities() {
         return contextActivities;
     }
 
@@ -57,7 +59,7 @@ public class XapiContext {
         return isValid;
     }
 
-    public void setContextActivities(Map<ContextActivityType, Object> contextActivities) {
+    public void setContextActivities(Map<ContextActivityType, List<Activity>> contextActivities) {
         this.contextActivities = contextActivities;
     }
 
