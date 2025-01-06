@@ -3,9 +3,8 @@ package com.meursong.xapi.common;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * 2024.12.24[susong]: LRS 설계
- * 언어 코드 값을 상수화하여 저장하는 클래스
- * xAPI에서 사용되는 규격은 국제 표준 BCP 47(현재는 RFC 5646과 RFC 4647)에 따른 형식임 (en-US, ko-KR, fr-FR...)
+ * Enum representing various language codes.
+ * Usage of international standard format BCP 47 (currently RFC 5646 and RFC 4647) in xAPI (such as en-US, ko-KR, fr-FR...)
  */
 public enum Language {
     AF("af"),
