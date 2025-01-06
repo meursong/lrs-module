@@ -1,16 +1,24 @@
 # xAPI Module
 
-** xAPI Module** is a modularized implementation of a Learning Record Store (LRS) for Java-based projects. It allows easy integration of xAPI (Experience API) capabilities into your application, providing robust features for storing, querying, and managing learning activity data.
+** xAPI Module is a lightweight and modular library for creating xAPI-compliant statements in Java-based projects. It simplifies the process of generating xAPI statements while adhering to the xAPI (Experience API) specification. This library does not include Learning Record Store (LRS) integration, focusing instead on statement creation.
 
 ---
 
 ## Features
 
-- **xAPI Support**: Easily process and store xAPI statements.
-- **Modular Design**: Integrate only the parts you need.
-- **Lightweight**: Designed to be fast and efficient with minimal overhead.
-- **Extensible**: Customize and extend functionality as required.
-- **Easy Integration**: Compatible with Gradle and Maven for effortless dependency management.
+- xAPI Statement Creation: Easily create xAPI-compliant statements, including actors, verbs, objects, and contexts.
+- Modular Design: Use only the components you need for your project.
+- Extensible: Customize and extend functionality to suit your requirements.
+- Lightweight: Designed for efficiency with minimal dependencies.
+- Easy Integration: Compatible with Gradle and Maven for seamless dependency management.
+- Multilingual Support: Generate statements with display names in multiple languages based on the RFC 5646 language tag standard.
+
+---
+
+## Use Cases
+
+- Applications that need to generate xAPI statements for tracking learning activities.
+- Systems requiring a simple and modular way to adopt xAPI without full LRS integration.
 
 ---
 
