@@ -22,7 +22,7 @@ import java.lang.annotation.Target;
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface LrsStatement {
+public @interface XapiStatement {
     String method();
 
     String actorKey();
