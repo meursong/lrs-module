@@ -5,10 +5,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class XapiAgent implements XapiActor {
-    private final String objectType = "Agent"; // "Agent" 고정
-    private String mbox;                      // 이메일 주소
-    private String name;                      // 이름
-    private XapiAccount account;              // 계정 정보
+    private final String objectType = "Agent";
+    private String mbox;
+    private String name;
+    private XapiAccount account;
 
     @JsonIgnore
     private boolean isValid = true;

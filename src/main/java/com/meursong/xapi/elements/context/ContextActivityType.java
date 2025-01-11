@@ -2,9 +2,9 @@ package com.meursong.xapi.elements.context;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 /**
- * 2024.12.24[susong]: LRS 설계
- * xAPI 규격의 contextActivities 키값을 제한하는 enum클래스
+ * An enumeration representing different types of context activities.
  */
 public enum ContextActivityType {
     @JsonProperty("parent")

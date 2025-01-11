@@ -5,9 +5,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
+
 /**
- * 2024.12.24[susong]: xAPI 규격의 Object를 정의하는 추상클래스
- * 새로운 Object 유형이 필요할 경우, 이 추상 클래스를 상속받아 새로운 하위 클래스를 정의하고 {@code @JsonSubTypes}에 해당 클래스와 매핑 이름을 추가할 것
+ * XapiObject is an abstract class that represents a generic object in the xAPI specification.
+ * It provides common properties and methods that are shared among different types of xAPI objects.
+ * This class is intended to be extended by more specific xAPI object classes such as Activity, Agent, Group, and SubStatement.
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonTypeInfo(

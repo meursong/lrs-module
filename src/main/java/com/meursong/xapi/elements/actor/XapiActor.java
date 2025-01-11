@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public interface XapiActor {
     
-    String getObjectType(); // "Agent" 또는 "Group"
+    String getObjectType();
 
-    boolean isValid();   // 유효성 검사 메서드
+    boolean isValid();
 }

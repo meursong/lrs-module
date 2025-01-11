@@ -6,9 +6,9 @@ import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class XapiGroup implements XapiActor {
-    private final String objectType = "Group"; // "Group" 고정
-    private String name;                      // 그룹 이름
-    private List<XapiAgent> members;          // 그룹 멤버 리스트
+    private final String objectType = "Group";
+    private String name;
+    private List<XapiAgent> members;
 
     public XapiGroup() {}
 
