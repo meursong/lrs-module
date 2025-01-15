@@ -17,8 +17,11 @@ public class ReflectionServiceTest {
 
         // 1. 클래스 로드
         // clazz는 "이 변수는 클래스를 나타내는 객체" 라고 알수있도록 한 관습임 spring이나 hibernate에도 너리 사용
+        // 이렇게 가져온 Class객체가 리플렉션의 핵심임. 런타임에 클래스의 정보를 가져오고 조작하는 엔트리 포인트
+        // 이 객체는 자바에서 클래스 메타데이터를 표현하며 플렉션을 통해 실행 중에 클래스의 구조(필드, 메서드, 생성자 등)를 탐색하고 조작할 수 있도록 함
+        // 리플렉션의 모든 주요 기능은 이 Class 객체를 기반으로 동작
         Class<?> clazz = Class.forName("com.example.ReflectionService");
-        System.out.println("Class found: " + clazz.getName());
+        System.out.println("클래스 이름 :" + clazz.getName());
 
         System.out.println("----------------------------------------------------------------------------");
 
