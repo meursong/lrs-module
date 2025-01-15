@@ -11,12 +11,18 @@ class LRSMethodTrackerTest {
 
     static class TestService {
         @TrackLRS(description = "Test method 1 description")
-        public void lrsMethod1() {}
+        public void lrsMethod1() {
+            System.out.println("this is a method 1 where you save xAPI statements");
+        }
 
         @TrackLRS(description = "Test method 2 description")
-        public void lrsMethod2() {}
+        public void lrsMethod2() {
+            System.out.println("this is a method 2 where you save xAPI statements");
+        }
 
-        public void nonLrsMethod() {}
+        public void nonLrsMethod() {
+            System.out.println("this has nothing to do with lrs");
+        }
     }
 
     @Test
