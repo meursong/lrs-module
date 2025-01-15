@@ -1,4 +1,4 @@
-package com.meursong.xapi.aop.annotation;
+package com.meursong.xapi.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
