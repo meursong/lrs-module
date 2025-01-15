@@ -8,15 +8,14 @@ import com.meursong.xapi.elements.object.Activity;
 import java.util.List;
 import java.util.Map;
 
+
 /**
- * 2024.12.24[susong]: LRS 설계
- * Statements의 컨텍스트를 정의하는 클래스 (전부 Optional)
- * contextActivities로 활동의 부모등을 명시할 수 있음
- * Context가 필요 할 경우 어노테이션의 contextRequired값을 true로 설정하고 Context를 정의할 것
+ * Represents the context for an xAPI statement with information about the activity's context, registration,
+ * instructor, revision, platform, language, and extensions.
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class XapiContext {
-    private Map<ContextActivityType, List<Activity>> contextActivities; // parent, grouping, category, other // parent, grouping, category, other
+    private Map<ContextActivityType, List<Activity>> contextActivities; // parent, grouping, category, other
     private String registration;
     private XapiActor instructor;
     private String revision;

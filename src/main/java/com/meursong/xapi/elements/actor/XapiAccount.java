@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class XapiAccount {
-    private String name;      // 계정 이름
-    private String homePage;  // 계정 홈 페이지 URL
+    private String name;
+    private String homePage;
 
     public XapiAccount() {}
 
