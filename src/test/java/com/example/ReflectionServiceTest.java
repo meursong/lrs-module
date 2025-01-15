@@ -16,6 +16,7 @@ public class ReflectionServiceTest {
         System.out.println("----------------------------------------------------------------------------");
 
         // 1. 클래스 로드
+        // clazz는 "이 변수는 클래스를 나타내는 객체" 라고 알수있도록 한 관습임 spring이나 hibernate에도 너리 사용
         Class<?> clazz = Class.forName("com.example.ReflectionService");
         System.out.println("Class found: " + clazz.getName());
 
